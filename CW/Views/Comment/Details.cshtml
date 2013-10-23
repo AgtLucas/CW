@@ -1,0 +1,43 @@
+﻿@model CW.Models.Comment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Comment</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContentComment)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContentComment)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateOfCreation)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateOfCreation)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Post.Content)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Post.Content)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.User.FirstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.User.FirstName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

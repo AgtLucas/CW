@@ -1,0 +1,46 @@
+﻿@model CW.Models.Page
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Page</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PageName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PageName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PageDescription)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PageDescription)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateOfCreation)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateOfCreation)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserOwnerId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserOwnerId)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

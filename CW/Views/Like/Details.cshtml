@@ -1,0 +1,29 @@
+﻿@model CW.Models.Like
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Like</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Post.Content)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Post.Content)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.User.FirstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.User.FirstName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

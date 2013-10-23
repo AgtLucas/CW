@@ -1,0 +1,43 @@
+﻿@model CW.Models.Page
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Page</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PageName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PageName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PageDescription)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PageDescription)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateOfCreation)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateOfCreation)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserOwnerId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserOwnerId)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
